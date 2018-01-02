@@ -69,5 +69,6 @@ public class Main {
         tree.getOverallRoot().right.right.left.right.right = new TreeNode(' ');
         tree.getOverallRoot().right.right.right.left.right = new TreeNode(' ');
         System.out.println("ginsu is a god");
+        tree.find("yeet");
     }
 }

@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -69,6 +71,26 @@ public class Main {
         tree.getOverallRoot().right.right.left.right.right = new TreeNode(' ');
         tree.getOverallRoot().right.right.right.left.right = new TreeNode(' ');
         System.out.println("ginsu is a god");
-        tree.find("yeet");
+        System.out.println("ginsu is a god");
+        Scanner sc = new Scanner (System.in);
+        String morse = sc.nextLine();
+        Scanner scan = new Scanner (morse);
+        String total = "";
+        while(scan.hasNext()){
+            String check = scan.next();
+            TreeNode root = tree.getOverallRoot();
+            while(check.length() != 0){
+                char c = check.charAt(0);
+                if(c == '.'){
+                    root = root.left;
+                }else if(c == '-'){
+                    root = root.right;
+                }
+                check.substring(1);
+            }
+            total = total + root.data;
+        }
+        System.out.println(total);
+    }
     }
 }
